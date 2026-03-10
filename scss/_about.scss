@@ -1,0 +1,167 @@
+// ----- about -----
+
+.about {
+	padding: toRem(20) 0;
+
+	opacity: 0;
+	transform: translateY(40px);
+	transition:
+		opacity 0.6s ease,
+		transform 0.6s ease;
+
+	&.--visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	// .about__container
+	&__container {
+	}
+
+	// .about__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: toRem(20);
+		@media (max-width: toEm(479.98)) {
+			flex-direction: column;
+		}
+	}
+
+	// .about__image
+	&__image {
+		flex-basis: 35%;
+
+		@media (max-width: toEm(479.98)) {
+			width: 50%;
+		}
+	}
+
+	// .about__img
+	&__img {
+		background-color: $greyColor;
+		width: 100%;
+		aspect-ratio: 1;
+		object-fit: cover;
+
+		border-radius: toRem(15);
+	}
+
+	// .about__content
+	&__content {
+		@include fs(lg);
+
+		flex-basis: 60%;
+		@media (max-width: toEm(479.98)) {
+			flex-basis: 100%;
+		}
+	}
+
+	// .about__title
+	&__title {
+		@include title;
+	}
+
+	// .about__text
+	&__text {
+		line-height: 1.6;
+		p:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		&--colored {
+			color: $pinkColor;
+		}
+	}
+
+	// .about__tab-titles
+	&__tab-titles {
+		display: flex;
+		gap: toRem(10) toRem(50);
+		margin: toRem(20) 0 toRem(40);
+		@media (max-width: toEm(767.98)) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: toRem(20);
+			margin-bottom: toRem(20);
+		}
+	}
+
+	// .about__tab-links
+	&__tab-links {
+		@include fs(xl);
+		font-weight: 500;
+		cursor: pointer;
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 0;
+			height: toRem(3);
+			background-color: $pinkColor;
+			position: absolute;
+			left: 0;
+			bottom: toRem(-8);
+			transition: width 0.5s;
+		}
+
+		&--active::after {
+			width: 100%;
+		}
+	}
+
+	// .about__skills-list
+	&__skills-list,
+	&__experience-list,
+	&__education-list {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(10);
+	}
+
+	// .about__education-item
+	&__skills-item,
+	&__education-item {
+		display: flex;
+		flex-direction: column;
+		gap: toRem(5);
+	}
+
+	&__skills-title,
+	&__education-year {
+		color: $pinkColor;
+	}
+
+	&__skills-desc,
+	&__education-desc,
+	&__education-ceo {
+		opacity: 0.8;
+	}
+
+	// .about__experience-item
+	&__experience-item {
+		p:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		opacity: 0.8;
+	}
+
+	// .about__tab-contents
+	&__tab-contents {
+		display: none;
+		opacity: 0;
+		transform: translateY(toRem(6));
+		transition:
+			opacity 0.25s ease,
+			transform 0.25s ease;
+		&--active {
+			display: block;
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	&__education-link {
+	}
+}

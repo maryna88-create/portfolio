@@ -1,0 +1,33 @@
+.button {
+	@include fs(lg);
+	white-space: nowrap;
+	text-align: center;
+	display: inline-block;
+	width: fit-content;
+	border: toRem(1) solid $pinkColor;
+	padding-block: toRem(14);
+	@include adaptiveValue("padding-inline", 50, 15);
+	border-radius: toRem(6);
+	transition:
+		background-color 0.5s,
+		color 0.5s;
+
+	&--color {
+		background-color: $pinkColor;
+		color: $lightColor;
+		margin: toRem(20) 0 0;
+		
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $pinkColor;
+			color: $lightColor;
+		}
+
+		&--color:hover {
+			background-color: transparent;
+			color: $mainColor;
+		}
+	}
+}

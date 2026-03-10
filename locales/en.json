@@ -1,0 +1,141 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+   "hero": {
+   "intro": "Welcome to my portfolio!",
+	"nameStart": "I'm",
+   "nameColored": "Maryna Melnyk",
+   "role": "Markup Developer",
+   "description": "Specializing in semantic HTML, modern CSS/SCSS architecture, JavaScript (ES6+), and TypeScript basics.",
+   "button": "View my work"
+  },
+  "about": {
+  "title": "About Me",
+
+  "paragraph1": "I am a markup developer focused on building __1__. My work is guided by __2__, __3__, and __4__.",
+  "colored1": "clean, scalable, well‑structured interfaces",
+  "colored2": "clarity",
+  "colored3": "consistency",
+  "colored4": "thoughtful UI architecture",
+
+  "paragraph2": "I translate designs into __5__ and pay close attention to detail — from __6__ to __7__. I enjoy creating predictable, well‑organized interfaces that behave consistently across devices.",
+  "colored5": "responsive, accessible layouts",
+  "colored6": "semantic HTML",
+  "colored7": "maintainable styling systems",
+
+  "paragraph3": "My workflow is based on __8__ and a structured approach to project organization.",
+  "colored8": "modern front‑end practices",
+
+  "tabs": {
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  },
+   "skills": {
+    "html_title": "HTML5",
+    "html_desc": "Semantic, structured markup",
+
+    "css_title": "CSS3 / SCSS",
+    "css_desc": "Structured SCSS, BEM, responsive design",
+
+    "js_title": "JavaScript (ES6+)",
+    "js_desc": "Interactivity, DOM logic",
+
+    "ts_title": "TypeScript",
+    "ts_desc": "Basic level, applying in new components and modules",
+
+    "responsive_title": "Responsive & Adaptive Layouts",
+    "responsive_desc": "flex/grid, media queries",
+
+    "ui_title": "UI Architecture",
+    "ui_desc": "Scalable and maintainable interface structure"
+  },
+
+  "experience": {
+    "item1": "Built multiple front‑end projects, including clones of LinkedIn, VidTube, Netflix, Socialbook, and Staybnb.",
+    "item2": "Developed multi‑page and single‑page interfaces such as Arik and Coral, including animations, theme switching, and custom UI components.",
+    "item3": "Converted Figma designs into responsive layouts with consistent behavior across devices."
+  },
+
+  "education": {
+    "year1": "2024",
+    "desc1": "Front End / WEBUI COURSE (HTML, CSS, JS).",
+    "ceo1": "CEO of \"Freelancer Life Style\"",
+	 "link": "View Certificate",
+	 
+    "year2": "2025",
+    "desc2": "JavaScript COURSE.",
+    "ceo2": "CEO of \"Freelancer Life Style\"",
+
+    "year3": "2025",
+    "desc3": "TypeScript COURSE.",
+    "ceo3": "CEO of \"Freelancer Life Style\""
+  },
+
+  "certificates": {
+  "frontend": "images/en/frontend-en.png",
+  "javascript": "images/en/javascript-en.png",
+  "typescript": "images/en/typescript-en.png"
+}
+},
+"services": {
+  "title": "My Services",
+
+  "item1": {
+    "title": "UI Architecture & Component Design",
+    "text": "I build scalable, maintainable interfaces with clear structure and reusable components."
+  },
+
+  "item2": {
+    "title": "Semantic HTML & Modular SCSS",
+    "text": "I write clean markup and architectural styles using the BEM methodology for predictable styling."
+  },
+
+  "item3": {
+    "title": "Interactive Interfaces with JavaScript",
+    "text": "I build interactive UI components using modern JavaScript (ES6+) and clean DOM logic."
+  },
+
+  "learnMore": "Learn more"
+},
+"portfolio": {
+  "title": "My Works",
+  "button_show": "See more",
+  "button_hide": "Hide"
+
+},
+"contact": {
+  "title": "Contact Me",
+
+  "downloadCV": "Download CV",
+
+  "form": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "submit": "Submit",
+	 "fill_required": "Please fill in all required fields.",
+    "sending": "Sending...",
+    "network_error": "Network error. Try again later.",
+    "success": "Message sent successfully!",
+    "fail": "Something went wrong. Try again."
+
+  }
+},
+ "errors": {
+    "email_no_at": "Email must contain @",
+    "email_latin_only": "Only lowercase Latin letters allowed",
+    "email_lowercase": "Email must be lowercase",
+    "required": "This field is required"
+  },
+"footer": {
+  "name": "© 2026 Maryna Melnyk.",
+  "copyright": "Crafted with"
+}
+
+}

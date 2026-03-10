@@ -1,0 +1,46 @@
+.popup {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
+	z-index: 950;
+	transition: opacity 0.3s ease;
+
+	&.active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	&__content {
+		position: relative;
+		background: $bgGreyColor;
+		padding: toRem(30);
+		border-radius: toRem(10);
+		max-width: toRem(400);
+		width: 90%;
+		text-align: center;
+		color: $lightColor;
+		@include fs(lg);
+	}
+
+	&__close {
+		position: absolute;
+		top: toRem(10);
+		right: toRem(10);
+		background: none;
+		border: none;
+		color: $lightColor;
+		font-size: toRem(28);
+		cursor: pointer;
+	}
+
+	&__message {
+		margin-top: toRem(10);
+		color: $lightColor;
+		@include fs(lg);
+		line-height: 1.4;
+	}
+}

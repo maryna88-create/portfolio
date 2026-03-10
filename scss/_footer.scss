@@ -1,0 +1,24 @@
+// ----- footer -----
+
+.footer {
+	padding-block: toRem(25);
+	background-color: $bgGreyColor;
+	// .footer__copyright-msg
+	&__copyright-msg {
+		color: $lightColor;
+		text-align: center;
+		i {
+			color: $pinkColor;
+		}
+	}
+
+	@media (max-width: toEm(767.98)) {
+		padding-block: toRem(10);
+
+		&__copyright-msg {
+			span {
+				display: block;
+			}
+		}
+	}
+}

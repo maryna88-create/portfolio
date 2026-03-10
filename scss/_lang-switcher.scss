@@ -1,0 +1,46 @@
+.lang-switcher {
+	position: relative;
+	display: flex;
+	gap: toRem(10);
+	@media (max-width: toEm(767.98)) {
+		.header__panel.open & {
+			padding: toRem(10) toRem(14);
+			background-color:$lightColor;
+
+			border-radius: toRem(12);
+			border: 1px solid $pinkColor;
+			z-index: 951;
+		}
+	}
+	// .lang-switcher__btn
+	&__btn {
+		background: none;
+		border: none;
+		color: $pinkColor;
+		font-weight: 600;
+		cursor: pointer;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		&.active {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+	}
+}
+
+[data-i18n] {
+	// transition: opacity 0.25s ease;
+	transition-property: opacity;
+	transition-duration: 0.25s;
+	transition-timing-function: ease;
+
+	opacity: 1;
+
+	&.i18n-fade {
+		opacity: 0;
+	}
+}

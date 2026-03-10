@@ -1,0 +1,91 @@
+// ----- hero -----
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	min-height: 50svh;
+
+	@media (max-width: toEm(767.98)) {
+		padding-top: toRem(80);
+	}
+
+	// .hero__container
+	&__container {
+		padding-block: toRem(20);
+		@media (max-width: toEm(480)) {
+			padding-block: toRem(20);
+		}
+	}
+
+	// .hero__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: toRem(20);
+	}
+
+	&__content > * {
+		opacity: 0;
+		transform: translateY(toRem(20));
+		transition:
+			opacity 0.6s ease,
+			transform 0.6s ease;
+	}
+
+	&.--visible .hero__content > * {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	@for $i from 1 through 10 {
+		&.--visible .hero__content > *:nth-child(#{$i}) {
+			transition-delay: #{0.1 * $i + 0.3}s;
+		}
+	}
+
+	// .hero__title
+	&__title {
+		text-transform: capitalize;
+		@include fs(hero);
+
+		@media (max-width: toEm(480)) {
+			font-size: toRem(30);
+		}
+	}
+
+	// .hero__name
+	&__name {
+		font-weight: 500;
+		font-family: "Lora", serif;
+		font-style: italic;
+
+		&--colored {
+			color: $pinkColor;
+		}
+	}
+
+	.hero__intro {
+	}
+
+	.hero__role {
+		@include fs(xxl);
+		font-weight: 500;
+		@media (max-width: toEm(480)) {
+			@include fs(xl);
+		}
+	}
+
+	// .hero__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	// .hero__button
+	&__button {
+	}
+}

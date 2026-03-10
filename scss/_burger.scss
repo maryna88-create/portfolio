@@ -1,0 +1,61 @@
+#burger {
+	width: toRem(30);
+	height: toRem(22);
+	display: none;
+	position: fixed;
+	top: 23px;
+	right: 20px;
+
+	cursor: pointer;
+	z-index: 501;
+
+	@media (max-width: toEm(767.98)) {
+		display: block;
+	}
+
+	span {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: toRem(3);
+		background-color: $greyColor;
+		border-radius: toRem(3);
+		transform: translateY(-50%);
+		transition: all 0.3s ease;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: toRem(3);
+		background-color: $greyColor;
+		border-radius: toRem(3);
+		transition: all 0.3s ease;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+
+	&.active span {
+		opacity: 0;
+	}
+
+	&.active::before {
+		transform: translateY(toRem(9)) rotate(45deg);
+		background-color: $pinkColor;
+	}
+
+	&.active::after {
+		transform: translateY(toRem(-9)) rotate(-45deg);
+		background-color: $pinkColor;
+	}
+}

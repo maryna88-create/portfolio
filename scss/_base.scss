@@ -1,0 +1,95 @@
+$fontFamily: "Manrope", sans-serif; // Шрифт за замовчуванням
+$fontSize: 16; // Розмір шрифту за замовченням (де 16 - розмір шрифту за замовчуванням з макету)
+
+// Основні кольори
+$bgColor: #feffef;
+$bgGreyColor: #262626;
+
+// $pinkColor: #E8A39A;
+
+$pinkColor: #ff004f;
+
+$mainColor: #1a1a1a; // Колір шрифту за замовчуванням
+$lightColor: #fff;
+$greyColor: #ababab;
+
+
+// Налаштування адаптивної сітки =========
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1290;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $fontFamily;
+	font-weight: 400;
+	width: 100%;
+	line-height: 1.4;
+	color: $mainColor;
+	background-color: $bgColor;
+
+	@media (max-width: toEm(767.98)) {
+		&.menu-open {
+			overflow: hidden;
+		}
+	}
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper > main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: toRem($maxWidthContainer);
+	padding-right: toRem(15);
+	padding-left: toRem(15);
+	margin: 0 auto;
+}
+
+.page {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: toRem(50);
+	margin-bottom: toRem(50);
+	transition: padding-top 0.3s ease;
+
+	@media (max-width: toEm(767.98)) {
+		gap: toRem(10);
+
+	}
+}
+
+
+#home,
+#about,
+#services,
+#portfolio,
+#contact {
+  scroll-margin-top: toRem(50);
+}
+
+#skills,
+#experience,
+#education {
+  scroll-margin-top: 120px;
+}
