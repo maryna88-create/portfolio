@@ -9,6 +9,7 @@ import createWatcher from "./createWatcher.js";
 import initI18n from "./lang.js";
 import initContactForm from "./initContactForm.js";
 import initToTop from "./toTopBtn/initToTop.js";
+import initActiveCard from "./initActiveCard.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initI18n();
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   openMenu();
   shrinkHeader();
   initPortfolioReveal();
-//   initPortfolioTapOverlay();
+  //   initPortfolioTapOverlay();
   initContactForm();
   createWatcher(
     ".portfolio",
@@ -27,6 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   initToTop();
+
+  initActiveCard({
+    itemSelector: ".portfolio__item",
+    activeClass: "portfolio__item--active",
+  });
 });
 
 window.addEventListener("load", () => {
